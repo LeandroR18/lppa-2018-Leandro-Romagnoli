@@ -8,6 +8,10 @@ var Board = {
     return document.getElementById('play');
   },
   getCells: function () {
+    var board = Board.getBoard();
+    return board.getElementsByTagName('li');
+  },
+  getAlivesCells: function () {
     return document.getElementsByClassName('alive');
   },
   createCells: function () {
@@ -15,7 +19,7 @@ var Board = {
     var html = '';
     var cellCount = Board.rows * Board.columns;
     for (var i = 0; i < cellCount; i++) {
-      html = html + '<li><li>';
+      html = html + '<li></li>';
     }
     board.innerHTML = html;
   },
@@ -24,4 +28,5 @@ var Board = {
     Cell.changeColor(cells[i]);
     }
   }
+
 }
