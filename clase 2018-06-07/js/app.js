@@ -1,4 +1,4 @@
-console.log("hola");
+console.log("asd");
 
 var Play = function () {
 var liAlives = Board.getCells();
@@ -6,11 +6,8 @@ Board.updateCells(liAlives)
 }
 
 var init =  function () {
-  Board.createCells();
-  var cells = Board.getCells();
-  for (var i = 0; i < cells.length; i++) {
-    cells[i].onclick = Cell.toggle;
-  }
+  Game.init();
+  Game.start();
   //var btnPlay = Board.getPlayButtton();
   //btnPlay.onclick = play;
 }
